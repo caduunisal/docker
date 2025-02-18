@@ -5,7 +5,8 @@ FROM httpd:latest
 COPY ./my-httpd.conf /usr/local/apache2/conf/httpd.conf
 
 # Copy website content to the image
-COPY ./public-html/ /usr/local/apache2/htdocs/
+#COPY ./public-html/ /usr/local/apache2/htdocs/
+COPY ./public-html/* /usr/local/apache2/htdocs/
 
 # Expose port 80
 EXPOSE 80
