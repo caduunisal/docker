@@ -10,4 +10,5 @@ RUN pip install flask-mysql
 
 COPY . /opt/source-code
 
-ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
+#ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
+CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0:5000"]
